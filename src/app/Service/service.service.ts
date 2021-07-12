@@ -15,4 +15,8 @@ export class ServiceService {
     return this.http.get<Concepto[]>(this.Url);
   }
 
+  createConcepto(concepto: Concepto){
+    return this.http.post<Concepto>(this.Url, concepto);
+  }
+
 }

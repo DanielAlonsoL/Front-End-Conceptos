@@ -1,1 +1,27 @@
-<p>add works!</p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Concepto</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Descripcion: </label>
+          <input type="text" class="form-control"
+          [(ngModel)]="concepto.descripcion" name="descripcion">
+        </div>
+        <div class="form-group">
+          <label for="">Metodo de pago: </label>
+          <input type="text" class="form-control"
+          [(ngModel)]="concepto.metodoPago" name="metodoPago">
+        </div>
+        <div class="form-group">
+          <label for="">Importe (MXN): </label>
+          <input type="number" class="form-control"
+          [(ngModel)]="concepto.importe" name="importe">
+        </div>
+        <button (click)="Guardar()" class="btn btn-success" style="float:right;">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
