@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Conceptos</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>DESCRIPCIÓN</th>
+            <th>MÉTODO DE PAGO</th>
+            <th>IMPORTE MXN</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let concepto of conceptos" class="text-center">
+            <td>{{concepto.id}}</td>
+            <td>{{concepto.descripcion}}</td>
+            <td>{{concepto.metodoPago}}</td>
+            <td>{{concepto.importe}}</td>
+            <td>
+              <button class="btn btn-warning">Editar</button>
+              <button class="btn btn-danger" style="margin-left: 10px;">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
