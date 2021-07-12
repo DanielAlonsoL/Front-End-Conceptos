@@ -21,7 +21,7 @@
             <td>{{concepto.metodoPago}}</td>
             <td>{{concepto.importe}}</td>
             <td>
-              <button class="btn btn-warning">Editar</button>
+              <button (click)="Editar(concepto)" class="btn btn-warning">Editar</button>
               <button class="btn btn-danger" style="margin-left: 10px;">Borrar</button>
             </td>
           </tr>
