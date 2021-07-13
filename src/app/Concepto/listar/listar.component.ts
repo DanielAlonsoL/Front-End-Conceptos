@@ -15,7 +15,6 @@ export class ListarComponent implements OnInit {
   ngOnInit(): void {
     this.service.getConceptos().subscribe((data) => {
       this.conceptos = data;
-      console.log(data);
     });
   }
 

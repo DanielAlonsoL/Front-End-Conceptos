@@ -6,21 +6,39 @@
     <div class="card-body">
       <form action="">
         <div class="form-group">
-          <label for="">Descripcion: </label>
-          <input type="text" class="form-control"
-          [(ngModel)]="concepto.descripcion" name="descripcion">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" style="width: 150px;">Descripcion: </label>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]="concepto.descripcion" name="descripcion">
+          </div>
         </div>
         <div class="form-group">
-          <label for="">Metodo de pago: </label>
-          <input type="text" class="form-control"
-          [(ngModel)]="concepto.metodoPago" name="metodoPago">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" style="width: 150px;">Método de pago</label>
+            </div>
+            <select class="custom-select" [(ngModel)]="concepto.metodoPago" name="metodoPago">
+              <option selected>Choose...</option>
+              <option value="Efectivo">Efectivo</option>
+              <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+              <option value="Tarjeta de débito">Tarjeta de débito</option>
+            </select>
+          </div>
+
         </div>
         <div class="form-group">
-          <label for="">Importe (MXN): </label>
-          <input type="number" class="form-control"
-          [(ngModel)]="concepto.importe" name="importe">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" style="width: 150px;">Importe (MXN): </label>
+            </div>
+            <input type="number" class="form-control" [(ngModel)]="concepto.importe" name="importe">
+          </div>
         </div>
-        <button (click)="Guardar()" class="btn btn-success" style="float:right;">Guardar</button>
+        <div style="float:right;">
+          <button (click)="Cancelar()" class="btn btn-danger" style="margin-right: 10px;">Cancelar</button>
+          <button (click)="Guardar()" class="btn btn-success">Guardar</button>
+        </div>
       </form>
     </div>
   </div>
