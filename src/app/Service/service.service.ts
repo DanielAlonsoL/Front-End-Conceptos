@@ -15,4 +15,16 @@ export class ServiceService {
     return this.http.get<Concepto[]>(this.Url);
   }
 
+  createConcepto(concepto: Concepto){
+    return this.http.post<Concepto>(this.Url, concepto);
+  }
+
+  getConceptoId(id: number){
+    return this.http.get<Concepto>(this.Url+"/"+id);
+  }
+
+  updateConcepto(concepto: Concepto){
+    return this.http.put<Concepto>(this.Url+"/"+concepto.id, concepto);
+  }
+
 }
